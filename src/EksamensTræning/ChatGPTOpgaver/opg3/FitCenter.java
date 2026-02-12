@@ -1,9 +1,6 @@
 package EksamensTræning.ChatGPTOpgaver.opg3;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -34,7 +31,7 @@ public class FitCenter {
 
     public void fileToGUI(){
         try{
-            Scanner scn = new Scanner(new File("src/EksamensTræning/ChatGPTOpgaver/opgave2/Members.csv"));
+            Scanner scn = new Scanner(new FileReader("src/EksamensTræning/ChatGPTOpgaver/opgave2/Members.csv"));
             while (scn.hasNextLine()){
                 String line = scn.nextLine();
                 System.out.println(line);
